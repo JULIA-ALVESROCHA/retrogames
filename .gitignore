@@ -1,0 +1,21 @@
+# Segredos: connection string e senhas (Espec. 6, RS05)
+.env
+
+# .NET
+bin/
+obj/
+*.user
+*.suo
+.vs/
+TestResults/
+
+# Front-end
+node_modules/
+dist/
+
+# Editores e sistema
+.vscode/*
+!.vscode/extensions.json
+.idea/
+.DS_Store
+Thumbs.db
