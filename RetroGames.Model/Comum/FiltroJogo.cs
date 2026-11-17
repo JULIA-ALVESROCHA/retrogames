@@ -12,6 +12,12 @@ public class FiltroJogo
     public int? IdPlataforma { get; set; }
 
     /// <summary>
+    /// Id do gênero. O Repository não usa este campo: o Service lê os vínculos
+    /// jogo-gênero, seleciona com LINQ os ids dos jogos do gênero e preenche <see cref="IdsJogos"/>.
+    /// </summary>
+    public int? IdGenero { get; set; }
+
+    /// <summary>
     /// Ids dos jogos permitidos. O Service usa para o filtro por gênero:
     /// resolve os ids com LINQ e o Repository filtra e pagina no SQL.
     /// Lista vazia significa "nenhum jogo".
