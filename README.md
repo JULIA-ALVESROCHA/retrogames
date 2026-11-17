@@ -14,13 +14,15 @@ retrogames/
 ├── docs/                     MER, histórias de usuário e diagrama
 ├── RetroGames.Model/         entidades (uma classe por tabela) e tipos compartilhados
 ├── RetroGames.Repository/    acesso a dados com ADO.NET + MySqlConnector
+├── RetroGames.Services/      regras de negócio, erros de negócio e composição com LINQ
+├── RetroGames.WebApi.ApiModels/  formato do JSON: envelope, códigos e ApiModels
+├── RetroGames.WebApi/        API: controllers, mappers, tratamento de erros e Swagger
 ├── RetroGames.sln
 ├── .env.example              modelo do .env (sem senha)
 └── .gitignore
 ```
 
-Os projetos `RetroGames.Services`, `RetroGames.WebApi.ApiModels`, `RetroGames.WebApi`,
-`RetroGames.WebApi.UnitTests` e o front-end `retrogames.web` entram nas próximas aulas.
+O projeto `RetroGames.WebApi.UnitTests` e o front-end `retrogames.web` entram nas próximas aulas.
 
 ## Como preparar o ambiente
 
@@ -35,9 +37,17 @@ Os projetos `RetroGames.Services`, `RetroGames.WebApi.ApiModels`, `RetroGames.We
 dotnet build
 ```
 
+4. Suba a API e abra o Swagger em http://localhost:5080/swagger:
+
+```bash
+dotnet run --project RetroGames.WebApi
+```
+
 ## Progresso
 
 | Aula | Conteúdo | Situação |
 | --- | --- | --- |
 | 1 | Banco de dados, dados de exemplo e classes de modelo | Concluída |
 | 2 | Camada Repository e conexão com o banco | Concluída |
+| 3 | Camada Service e erros de negócio | Concluída |
+| 4 | API (parte 1): rotas GET, envelope e tratamento global de erros | Concluída |
